@@ -7,6 +7,7 @@ namespace ET
 	{
 		protected override async ETTask Run(Unit unit, G2M_SessionDisconnect message)
 		{
+			unit.Domain.GetComponent<UnitComponent>().Remove(unit.Id);
 			await ETTask.CompletedTask;
 		}
 	}

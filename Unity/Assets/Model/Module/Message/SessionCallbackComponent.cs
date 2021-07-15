@@ -14,10 +14,8 @@ namespace ET
             {
                 return;
             }
-
-            base.Dispose();
-
             this.DisposeCallback?.Invoke(this.GetParent<Session>());
+            base.Dispose();
         }
     }
 }
